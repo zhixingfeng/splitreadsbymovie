@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC90750B1E83767B0084E754 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC90750A1E83767B0084E754 /* main.cpp */; };
+		DC9075121E8376B90084E754 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC9075111E8376B90084E754 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		DC9075071E83767B0084E754 /* splitreadsbymovie */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = splitreadsbymovie; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC90750A1E83767B0084E754 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DC9075111E8376B90084E754 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +41,7 @@
 		DC9074FE1E83767B0084E754 = {
 			isa = PBXGroup;
 			children = (
-				DC9075091E83767B0084E754 /* splitreadsbymovie */,
+				DC9075111E8376B90084E754 /* main.cpp */,
 				DC9075081E83767B0084E754 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,14 +52,6 @@
 				DC9075071E83767B0084E754 /* splitreadsbymovie */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		DC9075091E83767B0084E754 /* splitreadsbymovie */ = {
-			isa = PBXGroup;
-			children = (
-				DC90750A1E83767B0084E754 /* main.cpp */,
-			);
-			path = splitreadsbymovie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +111,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC90750B1E83767B0084E754 /* main.cpp in Sources */,
+				DC9075121E8376B90084E754 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
