@@ -21,6 +21,7 @@
 #include <stdexcept>
 #include <cstdint>
 #include <cstdlib>
+#include <memory>
 
 #include "kseq.h"  
 using namespace std;
