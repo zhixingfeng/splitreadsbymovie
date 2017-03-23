@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		DC9075071E83767B0084E754 /* splitreadsbymovie */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = splitreadsbymovie; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9075111E8376B90084E754 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DC9075131E837DDC0084E754 /* splitreadsbymovie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = splitreadsbymovie.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +42,7 @@
 		DC9074FE1E83767B0084E754 = {
 			isa = PBXGroup;
 			children = (
+				DC9075131E837DDC0084E754 /* splitreadsbymovie.h */,
 				DC9075111E8376B90084E754 /* main.cpp */,
 				DC9075081E83767B0084E754 /* Products */,
 			);
@@ -161,6 +163,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lz";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -201,6 +204,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lz";
 				SDKROOT = macosx;
 			};
 			name = Release;
