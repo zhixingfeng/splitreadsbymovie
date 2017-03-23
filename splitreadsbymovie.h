@@ -70,5 +70,53 @@ inline map<string, int64_t> getmoviename(string fasta_file)
     return moviename;
 }
 
+inline void splitreadsbymovie(string fasta_file, string outdir)
+{
+    map<string, int64_t> movienames = getmoviename(fasta_file);
+    map<string, int64_t>::iterator it;
+    
+    // open output files
+    map<string, shared_ptr<ofstream> > fs_outfiles;
+    map<string, shared_ptr<ofstream> >::iterator it_fs;
+    for (it=movienames.begin(); it!=movienames.end(); it++){
+        fs_outfiles.insert(make_pair(it->first, make_shared<ofstream>(outdir + "/" + it->first + ".fasta")));
+        if (!fs_outfiles[it->first]->is_open()){
+            cerr << "fail to open " + outdir + "/" + it->first + ".fasta" << endl;
+            exit(1);
+        }
+    }
+    
+    // scan and split fast file
+    gzFile fp;
+    kseq_t *seq;
+    int l;
+    fp = gzopen(fasta_file.c_str(), "r");
+    if (fp==NULL){
+        cerr << "fail to open " + fasta_file << endl;
+        exit(1);
+    }
+    seq = kseq_init(fp);
+    while ((l = kseq_read(seq)) >= 0) {
+        string cur_moviename = split(seq->name.s, '/')[0];
+        it_fs = fs_outfiles.find(cur_moviename);
+        if (it_fs==fs_outfiles.end()){
+            cerr << "fail to find " + cur_moviename << endl;
+            exit(1);
+        }
+        *it_fs->second << ">" << seq->name.s << endl;
+        *it_fs->second << seq->seq.s << endl;
+    }
+    kseq_destroy(seq);
+    gzclose(fp);
+    
+    // close output files
+    for (it_fs=fs_outfiles.begin(); it_fs!=fs_outfiles.end(); it_fs++){
+        it_fs->second->close();
+    }
+    
+}
+
 
 #endif /* getmoviename_h */
+
+
