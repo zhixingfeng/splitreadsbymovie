@@ -26,6 +26,11 @@
 		DC9075071E83767B0084E754 /* splitreadsbymovie */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = splitreadsbymovie; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9075111E8376B90084E754 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DC9075131E837DDC0084E754 /* splitreadsbymovie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = splitreadsbymovie.h; sourceTree = "<group>"; };
+		DCA609781E84395B00AFAF59 /* kseq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kseq.h; sourceTree = "<group>"; };
+		DCA609791E84396A00AFAF59 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		DCA6097B1E84399B00AFAF59 /* m150624_030639_00127_c100809242550000001823177310081540_s1_p0.fasta */ = {isa = PBXFileReference; lastKnownFileType = text; path = m150624_030639_00127_c100809242550000001823177310081540_s1_p0.fasta; sourceTree = "<group>"; };
+		DCA6097C1E84399B00AFAF59 /* m151210_063816_00127_c100936312550000001823205704291610_s1_p0.fasta */ = {isa = PBXFileReference; lastKnownFileType = text; path = m151210_063816_00127_c100936312550000001823205704291610_s1_p0.fasta; sourceTree = "<group>"; };
+		DCA6097D1E84399B00AFAF59 /* test.seq */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.seq; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,9 @@
 		DC9074FE1E83767B0084E754 = {
 			isa = PBXGroup;
 			children = (
+				DCA6097A1E84399B00AFAF59 /* test */,
+				DCA609791E84396A00AFAF59 /* Makefile */,
+				DCA609781E84395B00AFAF59 /* kseq.h */,
 				DC9075131E837DDC0084E754 /* splitreadsbymovie.h */,
 				DC9075111E8376B90084E754 /* main.cpp */,
 				DC9075081E83767B0084E754 /* Products */,
@@ -54,6 +62,16 @@
 				DC9075071E83767B0084E754 /* splitreadsbymovie */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DCA6097A1E84399B00AFAF59 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				DCA6097B1E84399B00AFAF59 /* m150624_030639_00127_c100809242550000001823177310081540_s1_p0.fasta */,
+				DCA6097C1E84399B00AFAF59 /* m151210_063816_00127_c100936312550000001823205704291610_s1_p0.fasta */,
+				DCA6097D1E84399B00AFAF59 /* test.seq */,
+			);
+			path = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +260,7 @@
 				DC9075101E83767B0084E754 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
